@@ -44,7 +44,7 @@
                                    {{-- <a class="sub-nav-link" href="{{route('product-list')}}">List</a> --}}
                               </li>
                               <li class="sub-nav-item">
-                                   <a class="sub-nav-link" href="{{('product-grid')}}">Grid</a>
+                                   {{-- <a class="sub-nav-link" href="{{('product-grid')}}">Grid</a> --}}
                               </li>
                               <li class="sub-nav-item">
                                    {{-- <a class="sub-nav-link" href="{{route('product-details')}}">Details</a> --}}
@@ -90,6 +90,9 @@
                     </a>
                     <div class="collapse" id="sidebarInventory">
                          <ul class="nav sub-navbar-nav">
+                              <li class="sub-nav-item">
+                                   {{-- <a class="sub-nav-link" href="{{route('inventory-warehouse')}}">Warehouse</a> --}}
+                              </li>
                               <li class="sub-nav-item">
                                    {{-- <a class="sub-nav-link" href="{{route('inventory-warehouse')}}">Warehouse</a> --}}
                               </li>
@@ -198,10 +201,84 @@
                               <iconify-icon icon="solar:settings-bold-duotone"></iconify-icon>
                          </span>
                          <span class="nav-text"> Settings </span>
-                    </a>
+                    {{-- </a> --}}
                </li>
 
-               <li class="menu-title mt-2">Users</li>
+               <li class="menu-title mt-2">Gestion Utilisateur</li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link menu-arrow" href="#sidebarDepart" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarDepart">
+                         <span class="nav-icon">
+                              <iconify-icon icon="fluent:building-24-regular"></iconify-icon>
+                         </span>
+                         <span class="nav-text"> Départements </span>
+                    </a>
+                    <div class="collapse" id="sidebarDepart">
+                        <ul class="nav sub-navbar-nav">
+                            <li class="sub-nav-item">
+                                <a class="sub-nav-link" href="{{('ajouter_departement')}}">Ajouter</a>
+                            </li>
+                            <li class="sub-nav-item">
+                                <a class="sub-nav-link" href="{{route('lister_departement')}}">Liste</a>
+                            </li>
+                         </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-arrow" href="#sidebarPoste" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarPoste">
+                         <span class="nav-icon">
+                              <iconify-icon icon="fluent:briefcase-24-regular"></iconify-icon>
+                         </span>
+                         <span class="nav-text"> Postes </span>
+                    </a>
+                    <div class="collapse" id="sidebarPoste">
+                        <ul class="nav sub-navbar-nav">
+                            <li class="sub-nav-item">
+                                <a class="sub-nav-link" href="{{('ajouter_poste')}}">Ajouter</a>
+                            </li>
+                            <li class="sub-nav-item">
+                                <a class="sub-nav-link" href="{{route('lister_poste')}}">Liste</a>
+                            </li>
+                         </ul>
+                    </div>
+                </li>
+               <li class="nav-item">
+                    <a class="nav-link menu-arrow" href="#sidebarRole" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarRole">
+                         <span class="nav-icon">
+                              <iconify-icon icon="mdi:shield-account-outline"></iconify-icon>
+                         </span>
+                         <span class="nav-text"> Rôle </span>
+                    </a>
+                    <div class="collapse" id="sidebarRole">
+                        <ul class="nav sub-navbar-nav">
+                            <li class="sub-nav-item">
+                                <a class="sub-nav-link" href="{{('ajouter_role')}}">Ajouter</a>
+                            </li>
+                            <li class="sub-nav-item">
+                                <a class="sub-nav-link" href="{{route('lister_role')}}">Liste</a>
+                            </li>
+                         </ul>
+                    </div>
+               </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-arrow" href="#sidebarPermis" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarPermis">
+                         <span class="nav-icon">
+                              <iconify-icon icon="mdi:lock-check-outline"></iconify-icon>
+                         </span>
+                         <span class="nav-text"> Permission </span>
+                    </a>
+                    <div class="collapse" id="sidebarPermis">
+                        <ul class="nav sub-navbar-nav">
+                            <li class="sub-nav-item">
+                                <a class="sub-nav-link" href="{{('ajouter_permission')}}">Ajouter</a>
+                            </li>
+                            <li class="sub-nav-item">
+                                <a class="sub-nav-link" href="{{route('lister_permission')}}">Liste</a>
+                            </li>
+                         </ul>
+                    </div>
+               </li>
 
                <li class="nav-item">
                     {{-- <a class="nav-link" href="{{route('pages-profile') }}"> --}}
@@ -328,7 +405,7 @@
                               <iconify-icon icon="solar:chat-round-bold-duotone"></iconify-icon>
                          </span>
                          <span class="nav-text"> Chat </span>
-                    </a>
+                    {{-- </a> --}}
                </li>
 
                <li class="nav-item">
@@ -337,7 +414,7 @@
                               <iconify-icon icon="solar:mailbox-bold-duotone"></iconify-icon>
                          </span>
                          <span class="nav-text"> Email </span>
-                    </a>
+                    {{-- </a> --}}
                </li>
 
                <li class="nav-item">
@@ -346,7 +423,7 @@
                               <iconify-icon icon="solar:calendar-bold-duotone"></iconify-icon>
                          </span>
                          <span class="nav-text"> Calendar </span>
-                    </a>
+                    {{-- </a> --}}
                </li>
 
                <li class="nav-item">
@@ -355,7 +432,7 @@
                               <iconify-icon icon="solar:checklist-bold-duotone"></iconify-icon>
                          </span>
                          <span class="nav-text"> Todo </span>
-                    </a>
+                    {{-- </a> --}}
                </li>
 
                <li class="menu-title mt-2">Support</li>
@@ -366,7 +443,7 @@
                               <iconify-icon icon="solar:help-bold-duotone"></iconify-icon>
                          </span>
                          <span class="nav-text"> Help Center </span>
-                    </a>
+                    {{-- </a> --}}
                </li>
 
                <li class="nav-item">
@@ -384,7 +461,7 @@
                               <iconify-icon icon="solar:document-text-bold-duotone"></iconify-icon>
                          </span>
                          <span class="nav-text"> Privacy Policy </span>
-                    </a>
+                    {{-- </a> --}}
                </li>
 
                <li class="menu-title mt-2">Custom</li>
