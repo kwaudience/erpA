@@ -7,9 +7,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/index', function () {
-    return view('index');
-})->name('index');
 
 
 
@@ -18,6 +15,9 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
+    Route::get('/index', function () {
+        return view('index');
+    })->name('index');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
@@ -53,18 +53,17 @@ Route::get('/lister_role', function () {
 //postes
 Route::get('/ajouter_poste', function () {
     return view('postes.ajouter');
-})->name('ajouter_role');
+})->name('ajouter_poste');
 
 Route::get('/editer_poste', function () {
     return view('postes.editer');
-})->name('editer_role');
+})->name('editer_poste');
 
 Route::get('/lister_poste', function () {
     return view('postes.liste');
-})->name('lister_role');
+})->name('lister_poste');
 
 //permissions
-
 Route::get('/ajouter_permission', function () {
     return view('permissions.ajouter');
 })->name('ajouter_permission');
@@ -81,3 +80,4 @@ Route::get('/lister_permission', function () {
 
 
 require __DIR__.'/auth.php';
+require __DIR__.'/admin.php';

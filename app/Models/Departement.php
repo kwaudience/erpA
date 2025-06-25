@@ -6,9 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Departement extends Model
 {
-    //
-    protected $fillable = [
-        'name',
-        
-    ];  
+
+    protected $fillable = ['name'];
+    public function positions() {
+        return $this->hasMany(Poste::class);
+    }
+
 }
